@@ -1,0 +1,31 @@
+<div style="margin: 20px; text-align: right;">
+    <span style="text-align: center !important;"><b> Account History</b></span>
+    <button class="btn btn-primary" style="margin-right: 10px;" (click)="BackFunc()">Back</button>
+    <button class="btn btn-primary" routerLink="/HomePage"> Home</button>
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Name </th>
+                <th>mobileNo</th>
+                <th>Fat</th>
+                <th>SNF</th>
+                <th>Qty</th>
+                <th>Rate</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of dataList">
+                <td>{{ item.Name }}</td>
+                <td>{{ item.mobileNo }}</td>
+                <td>{{ item.Fat }}</td>
+                <td>{{ item.SNF }}</td>
+                <td>{{ item.Qty }}</td>
+                <td>{{ item.Rate }}</td>
+                <td>{{ item.Amount }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
